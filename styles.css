@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth !important;
+    background-color: #1c1a1a;
+    color: white;
+}
+
+.landing {
+    height: 100vh;
+    border-bottom: 2px solid white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 8rem;
+}
+
+
+.landing__left {
+    grid-column: 1/2;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    width: min-content;
+}
+
+.landing__nav {
+    grid-column: 3/4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border-left: 2px solid white;
+    font-family: "Inria Serif", serif;
+    font-size: 1.3rem;
+}
+
+.landing__nav ul {
+    align-self: left;
+    justify-self: left;
+    margin-left: -60%;
+    list-style: none;
+}
+
+.landing__nav li {
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.landing__nav li::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #1c1a1a;
+    border-radius: 50%;
+    border: 2px solid white;
+    top: 50%;
+    left: -5vw;
+    transform: translateY(-50%) translateX(1.3vw);
+}
+
+@media screen and (min-width: 1240px) and (max-width: 1300px) {
+    .landing__nav li::before {
+        left: -3vw;
+        transform: translateY(-50%) translateX(0.5vw);
+    }
+}
+
+@media screen and (min-width: 900px) and (max-width: 950px) {
+    .landing__nav ul {
+        margin-left: -1%; 
+    }
+    .landing__nav li::before {
+        left: -2vw;
+        transform: translateY(-50%) translateX(-1.7vw);
+    }
+}
+
+.landing__nav a {
+    text-decoration: none;
+    color: white;
+}
+
+.landing__nav a:hover {
+    text-decoration: underline;
+}
+
+.landing__left p {
+    width: 100%;
+    font-family: "Work Sans", sans-serif;
+}
+
+.landing__left h1 {
+    font-family: "Inria Serif", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: clamp(13rem, 5vw, 20rem);
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    line-height: 150px;
+}
+
+.landing__left h2 {
+    font-family: "Inria Serif", serif;
+    font-weight: 200;
+    text-transform: uppercase;
+    font-style: normal;
+    font-size: clamp(3rem, 5vw, 4rem); 
+    margin-bottom: 10px;
+}
+
+.projects {
+    height: auto;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.projects .container {
+    grid-column: 1/ span 3;
+    padding: 2rem;
+    margin: 0 8rem;
+    border-left: 2px solid white;
+}
+
+.projects__heading {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 200;
+}
+
+.projects__desc {
+    margin-top: 10px;
+    font-family: 'Work Sans', 'sans-serif';
+}
+
+.projects__projectlist {
+    margin-top: 30px;
+    font-family: 'Work Sans', 'sans-serif';
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.project {
+    background-color: #322f2f;
+    text-align: left;
+    padding: 1.3rem;
+    width: 70%;
+    margin: 15px 0;
+}
+
+.project:nth-of-type(2n) {
+    align-self:last baseline
+}
+
+
+.project__date {
+    font-weight: 200;
+}
+
+.project__desc {
+    margin: 6px 0;
+}
+
+.project__tech-stack {
+    margin-top: 5px;
+    font-style: italic;
+    font-size: 90%;
+}
+
+.project__tech-stack--title {
+    font-family: 'Work Sans', 'sans-serif';
+    font-weight: bolder;
+}
+
+.project__link {
+    display: block;
+    margin: 10px 0;
+    color: lightblue;
+}
+
+@media screen and (max-width: 900px) {
+    .landing {
+        grid-template-columns: 1fr;
+        grid-template-rows: 25rem 5rem;
+        margin: 1.3rem auto;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+    }
+    .landing__left {
+        grid-column: 1;
+        grid-row: 1/2;
+        text-align: center;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+    }
+    .landing__nav {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        border-left: 0px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .landing__nav ul {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        border-top: 2px solid white;
+        padding: 20px;
+        margin: auto;
+        justify-content: space-around;
+        
+    }
+    .landing__nav ul li::before {
+        display: none;
+    }
+
+    .projects {
+        grid-template-columns: 1fr;
+    }
+    .projects .container {
+        padding: 2rem;
+        margin: 0 20px;
+        border-left: none;
+    }
+    .project {
+        width: 100%;
+        align-self: center;
+        justify-self: center;
+        margin: 20px auto;
+    }
+}
