@@ -128,13 +128,31 @@ html {
     border-left: 2px solid white;
 }
 
-.projects__heading {
+.projects__heading, .skills__heading {
     font-size: 2.5rem;
     text-transform: uppercase;
     font-weight: 200;
 }
 
-.projects__desc {
+footer.contact {
+    padding: 2rem;
+    border-top: 2px solid white;
+    display: flex;
+    align-items: center;
+}
+
+.contact a {
+    margin: 0 40px;
+    color: white;
+    text-decoration: underline;
+}
+
+.contact__heading {
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.projects__desc, .skills__desc {
     margin-top: 10px;
     font-family: 'Work Sans', 'sans-serif';
 }
@@ -184,6 +202,46 @@ html {
     margin: 10px 0;
     color: lightblue;
 }
+
+.skills {
+    display: flex;
+    justify-content: center;
+    height: auto;
+    text-align: center;
+    margin: 50px 0;
+    padding: 3rem;
+}
+
+.skills .container {
+    width: 80%;
+    border-right: 2px solid white;
+}
+
+.skills__list {
+    margin: 2rem;
+    background-color: #322f2f;
+    font-family: 'Work Sans', 'sans-serif';
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    align-items: start;
+}
+
+.skills__list ul {
+    padding: 10px;
+    text-align: left;
+    width: 100%;
+}
+
+.tools, .langs, .libraries {
+    text-align: left;
+}
+
+.tools p, .langs p, .libraries p {
+    text-decoration: underline;
+}
+
 
 @media screen and (max-width: 900px) {
     .landing {
@@ -237,5 +295,19 @@ html {
         align-self: center;
         justify-self: center;
         margin: 20px auto;
+    }
+
+    .skills__list {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        place-items: start;
+    }
+
+    .skills__list ul {
+        margin-bottom: 20px;
+    }
+
+    .skills__list div {
+        margin: 0 50px;
     }
 }
