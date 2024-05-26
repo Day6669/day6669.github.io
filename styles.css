@@ -297,9 +297,21 @@ footer.contact {
         margin: 20px auto;
     }
 
+    .skills {
+        padding: 1rem;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .skills .container {
+        width: 100%;
+        border: none;
+        margin: auto 0;
+    }
+
     .skills__list {
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, 1fr);
+        grid-template-rows: repeat(3, minmax(10px, auto));
         place-items: start;
     }
 
