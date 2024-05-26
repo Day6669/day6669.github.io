@@ -10,6 +10,22 @@ html {
     color: white;
 }
 
+.button {
+    padding: 10px 25px;
+    border: 1px solid white;
+    color: white;
+    width: min-content;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 20px auto;
+    letter-spacing: 3px;
+}
+
+.button:hover {
+    background-color: white;
+    color: #1c1a1a
+}
+
 .landing {
     height: 100vh;
     border-bottom: 2px solid white;
